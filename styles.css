@@ -69,6 +69,23 @@ body {
   height: 100%;
   object-fit: cover;
 }
+.profileText .imgBx img:hover {
+  border-radius: 50%;
+  animation: vibrate 3s infinite;
+}
+@keyframes vibrate {
+  0% {transform: rotate(0deg)}
+  10% {transform: rotate(10deg)}
+  20% {transform: rotate(-10deg)}
+  30% {transform: rotate(0deg)}
+  50% {transform: rotate(30deg)}
+  100% {transform: rotate(360deg)}
+  /*70% {transform: rotate(0deg)}*/
+  /*80% {transform: rotate(10deg)}*/
+  /*90% {transform: rotate(-10deg)}*/
+  /*100% {transform: rotate(0deg)}*/
+}
+
 .photo {
   width: 100%;
   height: auto;
