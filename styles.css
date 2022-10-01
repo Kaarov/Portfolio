@@ -7,7 +7,23 @@
 }
 
 body {
-  background-color: #FFF0EB;
+  background-color: white;
+  background-size: 300% 300%;
+  animation: color 4s infinite linear;
+  background-image: linear-gradient(
+          -45deg,
+          rgba(59,173,227,1) 0%,
+          rgba(87,111,230,1) 25%,
+          rgba(152,68,183,1) 50%,
+          rgba(255,53,127,1) 100%
+  );
+}
+@keyframes color {
+  0%{background-position: 0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position: 0% 50%}
+}
+.portfolio-list {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,6 +42,7 @@ body {
 }
 .container .left_side {
   position: relative;
+  /*background-color: #4f3b78;*/
   background-color: #232323;
   padding: 40px;
 }
@@ -92,6 +109,20 @@ body {
   display: inline-block;
   width: 30px;
   font-size: 18px;
+  color: #EEE7CE;
+}
+.contactInfo ul li .icon i:hover {
+  animation: icon-move 2s infinite;
+}
+@keyframes icon-move {
+  0% {transform: rotate(0deg)}
+  50% {transform: rotate(180deg)}
+  100% {transform: rotate(359deg)}
+}
+
+.contactInfo ul li .text {
+  width: 100%;
+  font-size: 14px;
   color: #EEE7CE;
 }
 .contactInfo ul li span {
@@ -206,6 +237,14 @@ p {
   color: #232323;
   font-size: 18px;
   width: 20px;
+}
+.interest ul li i:hover {
+  animation: icon-move 2s infinite;
+}
+@keyframes icon-move {
+  0% {transform: rotate(0deg)}
+  50% {transform: rotate(180deg)}
+  100% {transform: rotate(359deg)}
 }
 .kyrlng100 {
   width: 100%;
