@@ -81,6 +81,7 @@ body {
   50% {transform: rotate(30deg)}
   100% {transform: rotate(360deg)}
 }
+
 .photo {
   width: 100%;
   height: auto;
