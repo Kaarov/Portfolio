@@ -2,23 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <!--    <meta http-equiv="X-UA-Compatible" content="ie=edge">-->
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Anas Kaarov</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
-          integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
-          crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link
-            href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
-            rel="stylesheet"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--    <link rel="preconnect" href="https://fonts.googleapis.com"/>-->
+    <!--    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+          rel="stylesheet" />
 </head>
 <body>
-<!-- CONTENT START -->
+
+<!--    MAIN CONTENT STARTS   -->
 <div class="main">
     <img class="main-img" src="Anas.jpg" alt="photo">
     <div class="main-text">
@@ -35,34 +34,32 @@
         </p>
     </div>
 </div>
-<!--CONTENT END-->
-<!-- ! FACTS START -->
+<!--    MAIN CONTENT ENDS   -->
+<!--    FACTS START   -->
 <div class="facts container">
-    <div class="facts-block container">
-        <h2>Education</h2>
-        <div class="facts-block-edu">
-            <ul>
-                <li class="li-main">2020 - present</li>
-                <li>University</li>
-                <li>Ala Too International University</li>
-            </ul>
-            <ul>
-                <li class="li-main">2015 - 2020</li>
-                <li>Lyceum</li>
-                <li>Kut Bilim</li>
-            </ul>
-        </div>
+    <h2>Education</h2>
+    <div class="facts-block">
+        <ul>
+            <li class="li-main">2020 - present</li>
+            <li class="school-name">University</li>
+            <li>Ala Too International University</li>
+        </ul>
+        <ul>
+            <li class="li-main">2015 - 2020</li>
+            <li class="school-name">Lyceum</li>
+            <li>Kut Bilim</li>
+        </ul>
     </div>
 </div>
-<!-- ! FACTS END -->
-<!-- ! LANGUAGE START -->
+<!--    FACTS END   -->
+<!--   LANGUAGE START -->
 <div class="lang">
     <div class="lang-text">
         <h2>LANGUAGES</h2>
     </div>
     <br>
-    <div class="lang-level container">
-        <div class="lang-level__right">
+    <div class="lang-level">
+        <div class="lang-level-left">
             <div class="lang-level-kyrgyz percent-black">
                 <p>Kyrgyz</p>
             </div>
@@ -76,7 +73,7 @@
                 <p>Turkish</p>
             </div>
         </div>
-        <div class="lang-level__percent">
+        <div class="lang-level-percent">
             <p>100%</p>
             <p>85%</p>
             <p>85%</p>
@@ -84,15 +81,15 @@
         </div>
     </div>
 </div>
-<!-- ! LANGUAGE END -->
+<!--   LANGUAGE END -->
 <!-- ! SKILLS START -->
 <div class="skills">
     <div class="skills-text">
         <h2>Skills</h2>
     </div>
     <br>
-    <div class="skills-level container">
-        <div class="skills-level__right">
+    <div class="skills-level">
+        <div class="skills-level-left">
             <div class="skills-level-python percent-white">
                 <p>PYTHON</p>
             </div>
@@ -118,7 +115,7 @@
                 <p>TEAMWORK</p>
             </div>
         </div>
-        <div class="skills-level__percent">
+        <div class="skills-level-percent">
             <p>90%</p>
             <p>85%</p>
             <p>80%</p>
@@ -131,6 +128,12 @@
     </div>
 </div>
 <!-- ! SKILLS END -->
+<!--   CLICKER START   -->
+<div class="clicker">
+    <h1>Click Counter</h1>
+    <button id="clickme">Click me: 0</button>
+</div>
+<!--   CLICKER END   -->
 <!-- !FOOTER START -->
 <div class="footer">
     <p>Contact Info</p>
@@ -154,6 +157,19 @@
     </ul>
 </div>
 <!-- !FOOTER END -->
+<script>
+    let count = 0, size = 25;
+    document.getElementById("clickme").onclick = function() {
+        count += 1;
+        size += 2;
+        document.getElementById("clickme").innerHTML = "Click me: " + count;
+        document.getElementById("clickme").style.fontSize = size + "px";
+        if (count === 50) {
+            alert("Wow get 50 points :)")
+            count = 0;
+            size = 25;
+        }
+    };
+</script>
 </body>
 </html>
-
